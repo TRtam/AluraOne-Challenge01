@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./dist/tailwind.css">
+    <title>Encriptador/Desencriptador de Texto</title>
+</head>
+<body class="bg-[#F3F5FC]">
+    <main class="space-y-6 p-4 xl:flex xl:space-x-6 xl:space-y-0">
+        <header>
+            <!-- Logo -->
+            <img src="./assets/alura.svg" alt="logo" class="min-w-[4rem] min-h-[4.5rem] w-[4rem] h-[4.5rem]">
+        </header>
+        <!-- Input -->
+        <section
+            class="space-y-2 w-full"
+        >
+            <div
+                class="bg-white w-full h-[50vh] xl:h-[calc(100vh-8rem)] p-[2rem] rounded-[2rem]"
+            >
+                <textarea name="input" id="input" placeholder="Ingrese su texto aquí" class="w-full h-full resize-none"></textarea>
+            </div>
+            <div class="space-y-2">
+                <div
+                    class="h-fit flex xl:items-center gap-2"
+                >
+                    <img src="./assets/warning.svg" alt="warning" width="16" height="16">
+                    <span>
+                        Las letras mayúsculas seran convertidas a minúsculas, y los acentos seran removidos.
+                    </span>
+                </div>
+                <div
+                    class="flex justify-between items-center gap-6"
+                >
+                    <button type="button" id="encrypt" class="btn">
+                        Encriptar
+                    </button>
+                    <button type="button" id="decrypt" class="btn btn-secondary">
+                        Desencriptar
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Output -->
+        <section
+            class="bg-white flex justify-center items-center p-[2rem] xl:min-w-[25rem] w-full xl:max-w-[25rem] h-fit xl:h-[calc(100vh-2rem)] rounded-[2rem]"
+        >
+            <div class="w-full">
+                <div class="hidden w-full">
+                    <textarea name="output" id="output" type="text" readonly="true" class="w-full h-[calc(50vh-2rem-3rem-3rem)] xl:h-[calc(100vh-2rem-3rem-3rem)]"></textarea>
+                </div>
+                <div
+                    class="w-full space-y-6"
+                >
+                    <img id="person" src="./assets/person.svg" alt="person" class="w-full h-auto xl:w-[21rem] xl:h-[19rem]">
+                    <div
+                        class="space-y-6"
+                    >
+                        <h4
+                            class="w-full text-center text-2xl text-[#343A40] font-semibold"
+                        >
+                            Ningún mensaje fue encontrado
+                        </h4>
+                        <p class="w-full text-center text-[#495057]">
+                            Ingresa el texto que desees encriptar o desencriptar
+                        </p>
+                    </div>
+                </div>
+                <div class="hidden">
+                    <button type="button" id="copy" class="btn btn-secondary">
+                        Copiar
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="p-4 space-y-6">
+        <h3 class="text-2xl font-bold">
+            Hecho por TRtam(Diego A.)
+        </h3>
+        <nav>
+            <ul class="flex flex-wrap items-center gap-6">
+                <li>
+                    <a href="https://www.github.com/TRtam">
+                        <img src="./assets/github.svg" alt="github" width="32" height="32">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>

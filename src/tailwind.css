@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    *, ::before, ::after {
+        font-family: "Inter", sans-serif;
+    }
+
+    textarea, input {
+        @apply bg-transparent text-[1.5rem] text-[#0A3871] placeholder:text-[#0A3871] focus-within:outline-none
+    }
+}
+
+@layer components {
+    .btn {
+        @apply bg-[rgb(10,56,113)] w-full h-[3rem] rounded-[1rem] text-white hover:bg-[rgb(7,40,80)] active:bg-[rgb(5,20,39)] active:scale-[0.975] transition-all duration-300
+    }
+
+    .btn-secondary {
+        @apply bg-transparent text-[#0A3871] border border-[#0A3871] hover:bg-[rgb(10,56,113,0.15)] active:bg-[rgb(5,20,39)] active:text-white
+    }
+}
